@@ -1,0 +1,47 @@
+@media screen and (max-width:768px){
+    main{
+        display: block;
+        width: calc(100vw);
+        overflow: hidden;
+    }
+
+    .principale{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 100%;
+        font-size: .8em;
+    }
+
+    .principale div.row{
+        flex-wrap: nowrap;
+        transform: translateX(-368px);
+    }
+
+    .btn-menu{
+        display: inline-block;
+    }
+
+    .btn-close{
+        display: inline-block;
+    }
+
+    .contenu{
+        padding-left: 2rem;
+    }
+
+    #left-side{
+        width: 368px;
+        max-width: 368px;
+        min-width: 368px;
+    }
+
+    #right-side{
+        width: 100vw;
+        max-width: 100vw;
+        min-width: 100vw;
+    }
+
+    .right-content{
+        padding-left: 1em;
+    }
+}

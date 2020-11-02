@@ -1,0 +1,458 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway/Raleway-VariableFont_wght.ttf') format('truetype');
+}  
+
+body{
+    background: linear-gradient(to right, #376675, #466d7a);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+::selection{
+    color: white;
+    background: #1f3b44;
+}
+
+a{
+    color: inherit;
+}
+
+a:hover{
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: #ffffff3a;
+}
+
+.principale{
+    background-color: white;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 800px;
+    height: auto;
+    box-shadow: 0px 0px 30px rgba(56, 40, 40, 0.5);
+    position: relative;
+    font-size: .9em;
+}
+
+.principale div.row{
+    transition: transform .5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn-menu{
+    border : none;
+    display: none;
+    background: transparent;
+    position: absolute;
+}
+
+.btn-menu svg line{
+    stroke: rgb(39, 65, 70);
+    stroke-width: 2px;
+    transition: all .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.btn-close{
+    border : none;
+    display: none;
+    background: transparent;
+    position: absolute;
+    z-index: 100;
+    transform: translateX(calc(338px - 100%));
+    background: linear-gradient(45deg, transparent,rgba(0, 0, 0, 0.3));
+}
+
+.btn-close svg line{
+    stroke: rgb(253, 253, 253);
+    stroke-width: 2px;
+}
+
+.btn-menu:hover > svg line:nth-child(1){ transform: translateX(7px); }
+
+.btn-menu:hover > svg line:nth-child(2){ transform: translateX(-10px); }
+
+.btn-menu:hover > svg line:nth-child(3){ transform: translateX(10px); }
+
+.left-content, .right-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.left-content{
+    background: #24424d;
+    color: #ececec;
+}
+
+.right-content{
+    padding-left: .5em;
+}
+
+.poster{
+    position: relative;
+    width: 100%;
+    height: 350px;
+}
+
+.poster img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+}
+
+.contenu{
+    padding-left: 3rem;
+    padding-top: 2rem;
+}
+
+.bloc{
+    position: relative;
+}
+
+.bloc-title{
+    margin: 1rem 0 .5rem 0;
+}
+
+.bloc-title h6{
+    cursor: default;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    transition: text-shadow .5s;
+}
+
+.bloc-title hr.title-line{
+    background-color: #e2e2e2;
+    width: 100%;
+    height: 1px;
+    margin-left: 15px;
+    box-shadow: 0px 1px 2px #00000041;
+    transition: margin .5s;
+}
+
+.left-content .bloc:hover > .bloc-title h6{
+    text-shadow: 0px 0px 2px #ffffff79;
+    color: white;
+}
+
+.right-content .bloc:hover > .bloc-title h6{
+    text-shadow: 0px 0px 2px #6db8e452;
+}
+
+.bloc:hover > .bloc-title hr.title-line{
+    margin-left: 50px;
+}
+
+.skill-list .row{
+    margin-bottom: .8rem;
+}
+
+.skill-value{
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100px;
+    height: 3px;
+    background: #ffffff36;
+}
+
+.skill-value .value{
+    background: white;
+    box-shadow: 0px 1px 2px #ffffff60;
+    height: 3px;
+}
+
+.skill-value .value-point{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-left: -4px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px white;
+}
+
+.skill-value .value[data-html]{ width: 95%; }
+.skill-value .value[data-js]{ width: 90%; }
+.skill-value .value[data-php]{ width: 75%; }
+.skill-value .value[data-java]{ width: 70%; }
+.skill-value .value[data-laravel]{ width: 75%; }
+.skill-value .value[data-react]{ width: 75%; }
+.skill-value .value[data-database]{ width: 90%; }
+.skill-value .value[data-design]{ width: 80%; }
+.skill-value .value[data-jee]{ width: 60%; }
+
+.langue-skill{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.langue-item .langue-name{
+    font-family: "Raleway";
+}
+
+.langue-skill span{
+    display: inline-block;
+    margin: 10px 3px 5px 5px;
+    width: 8px;
+    height: 8px;
+    background: #ffffff38;
+    border-radius: 50%;
+}
+
+.langue-skill[data-langue="Malagasy"] span:nth-child(1),
+.langue-skill[data-langue="Malagasy"] span:nth-child(2),
+.langue-skill[data-langue="Malagasy"] span:nth-child(3),
+.langue-skill[data-langue="Malagasy"] span:nth-child(4),
+.langue-skill[data-langue="Malagasy"] span:nth-child(5),
+.langue-skill[data-langue="Malagasy"] span:nth-child(6),
+.langue-skill[data-langue="Malagasy"] span:nth-child(7),
+.langue-skill[data-langue="Malagasy"] span:nth-child(8),
+.langue-skill[data-langue="Malagasy"] span:nth-child(9),
+.langue-skill[data-langue="Malagasy"] span:nth-child(10),
+
+.langue-skill[data-langue="Francais"] span:nth-child(1),
+.langue-skill[data-langue="Francais"] span:nth-child(2),
+.langue-skill[data-langue="Francais"] span:nth-child(3),
+.langue-skill[data-langue="Francais"] span:nth-child(4),
+.langue-skill[data-langue="Francais"] span:nth-child(5),
+.langue-skill[data-langue="Francais"] span:nth-child(6),
+.langue-skill[data-langue="Francais"] span:nth-child(7),
+.langue-skill[data-langue="Francais"] span:nth-child(8),
+
+.langue-skill[data-langue="English"] span:nth-child(1),
+.langue-skill[data-langue="English"] span:nth-child(2),
+.langue-skill[data-langue="English"] span:nth-child(3),
+.langue-skill[data-langue="English"] span:nth-child(4),
+.langue-skill[data-langue="English"] span:nth-child(5),
+.langue-skill[data-langue="English"] span:nth-child(6),
+.langue-skill[data-langue="English"] span:nth-child(7){
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    box-shadow: 0px 0px 3px #ffffffab;
+}
+
+.right-content .bloc-title{
+    color: #25687c;
+}
+
+.right-content .bloc-title hr.title-line{
+    background-color: #25687c96;
+}
+
+.name{
+    font-family: "Raleway";
+    margin: 3rem 0 2rem 0;
+    color: #25687c;
+    cursor: default;
+    overflow: hidden;
+}
+
+.name .first-name, .name .last-name{
+    font-size: 3rem;
+}
+
+.name .last-name{
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+.name .name-details{
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform .5s;
+}
+
+.name .name-details div:nth-child(2){
+    height: 100%;
+    transform: translateX(150%);
+}
+
+.name .top-line,
+.name .bottom-line{
+    height: 1px;
+    background: #25687ccc;
+    width: 0%;
+    transition: width .5s;
+}
+
+.name .top-line{
+    position: relative;
+    float:right;
+}
+
+.name .bottom-line{
+    position: relative;
+    float:left;
+}
+
+.name .name-details .social-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.3rem;
+    height: 2.3rem;
+    font-size: 1.2rem;
+    /* border-radius: 50%; */
+    border: 1px solid #25687c;
+    color: #25687c;
+    transition: background .3s, color .3s, transform .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.name .name-details .social-link:hover{
+    text-decoration: none;
+    background: #25687c;
+    color: white;
+}
+
+.name:hover > div .top-line,
+.name:hover > div .bottom-line{
+    width : 80%;
+}
+
+.name:hover > .name-details .social-link{
+    transform: translateX(-200%);
+}
+
+.name:hover > .name-details{
+    transform: scale(.95);
+}
+
+.about .about-details{
+    font-family: "Raleway";
+    text-align: justify;
+    padding-right: 1em;
+}
+
+.job{
+    color: #474747;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+}
+
+.formation-list, .experience-list, .interest-list{
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience-list .experience-item p:nth-child(1),
+.formation-list .formation-item p:nth-child(1){
+    min-width: 50px;
+}
+
+.experience-list .experience-item .dot,
+.formation-list .formation-item .dot{
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #25687c;
+    transition: background .3s, box-shadow .3s;
+}
+
+.experience-list .experience-item .line,
+.formation-list .formation-item .line{
+    display: block;
+    width: 1px;
+    max-height:100%;
+    height: 100%;
+    background: #3594b1;
+    transform: translateY(7px);
+    transition: max-height .5s;
+}
+
+.experience-list .experience-item:hover > p .dot,
+.formation-list .formation-item:hover > p .dot{
+    background: #3594b1;
+    box-shadow: 0px 0px 5px #3594b19a;
+}
+
+.experience-list .experience-item:hover > p .line,
+.formation-list .formation-item:hover > p .line{
+    max-height: 80%;
+}
+
+.formation-list .formation-item,
+.experience-list .experience-item{
+    margin-bottom: 15px;
+}
+
+.formation-item .degree,
+.experience-item .title{
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.formation-item .school{
+    font-family: "Raleway";
+    color: #222222;
+}
+
+.formation-item .date{
+    color: teal;
+    font-weight: 600;
+}
+
+.experience-item .date{
+    color: teal;
+}
+
+.experience-item .activity{
+    font-family: "Raleway";
+}
+
+.interest-list{
+    flex-wrap: wrap;
+}
+
+.interest-list .interest-item{
+    width: 120px;
+}
+
+.interest-item .icon{
+    font-size: 2.5em;
+    color: #2d5663;
+}
+
+.interest-item .title{
+    font-family: "Raleway";
+    color: #4d4d4d;
+}
+  
+.curseur{
+    width: 1px;
+    height: 15px;
+    margin-left: -7px;
+    transform: translateY(2px);
+    display: inline-block;
+    background: #999999;
+    animation: cursor-anim 3s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+  
+@keyframes cursor-anim{
+    0%,100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+.company-name:hover{
+    text-decoration: underline rgba(128, 128, 128, 0.555);
+}
+
+.sg-logo{
+    padding: 1rem;
+}
