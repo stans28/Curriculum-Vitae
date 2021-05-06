@@ -62,13 +62,19 @@ a:hover{
     background: transparent;
     position: absolute;
     z-index: 100;
+    padding-right: 17px !important;
     transform: translateX(calc(338px - 100%));
     background: linear-gradient(45deg, transparent,rgba(0, 0, 0, 0.3));
 }
 
-.btn-close svg line{
-    stroke: rgb(253, 253, 253);
-    stroke-width: 2px;
+.btn-close span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-top: 3px solid #ffffff9c;
+    border-right: 3px solid #ffffff9c;
+    border-radius: 3px;
+    transform: rotate(45deg);
 }
 
 .btn-menu:hover > svg line:nth-child(1){ transform: translateX(7px); }
@@ -359,6 +365,10 @@ a:hover{
     border-radius: 50%;
     background: #25687c;
     transition: background .3s, box-shadow .3s;
+}
+
+.dot.active{
+    background: #3594b1 !important;
 }
 
 .experience-list .experience-item .line,
