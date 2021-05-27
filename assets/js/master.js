@@ -35,9 +35,16 @@ function showProfil() {
 }
 
 function closeProfil() {
-    $(".principale div.row").css({
-        transform : "translateX(-368px)"
-    });
+    const x = window.matchMedia("(max-width: 368px)");
+    if (x.matches) {
+        $(".principale div.row").css({
+            transform : "translateX(-100vw)"
+        });
+    } else {
+        $(".principale div.row").css({
+            transform : "translateX(-368px)"
+        });
+    }
 
     if (profilShown) {
         $(".btn-close").hide();
@@ -46,3 +53,10 @@ function closeProfil() {
 
     profilShown = false;
 }
+
+window.addEventListener("resize", function() {
+    console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight+' high');
+    console.log("%cChanging width", "font-size:30px")
+    if(window.innerWidth >= 768) showProfil();
+    else closeProfil();
+})
