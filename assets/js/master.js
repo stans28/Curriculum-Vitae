@@ -55,8 +55,6 @@ function closeProfil() {
 }
 
 window.addEventListener("resize", function() {
-    console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight+' high');
-    console.log("%cChanging width", "font-size:30px")
     if(window.innerWidth >= 768) showProfil();
     else closeProfil();
 })

@@ -120,6 +120,7 @@ a:hover{
 .poster .download-link a{
     color: #ffffffa1;
     opacity : 0;
+    display: none;
     transition: opacity .4s;
 }
 
