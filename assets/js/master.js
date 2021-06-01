@@ -54,10 +54,10 @@ function closeProfil() {
     profilShown = false;
 }
 
-window.addEventListener("resize", function() {
-    if(window.innerWidth >= 768) showProfil();
-    else closeProfil();
-})
+// window.addEventListener("resize", function() {
+//     if(window.innerWidth >= 768) showProfil();
+//     else closeProfil();
+// })
 
 function toDataURL(url, callback) {
     var xhr = new XMLHttpRequest();
