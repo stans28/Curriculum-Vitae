@@ -3,6 +3,10 @@ $(document).ready(function () {
 
     $(document).on("click", ".btn-menu", showProfil);
     $(document).on("click", ".btn-close", closeProfil);
+
+    $("img").bind('load', function() {
+        $(this).css("display", "inline-block");
+    });
 });
 
 function showJob() {
@@ -53,11 +57,6 @@ function closeProfil() {
 
     profilShown = false;
 }
-
-// window.addEventListener("resize", function() {
-//     if(window.innerWidth >= 768) showProfil();
-//     else closeProfil();
-// })
 
 function toDataURL(url, callback) {
     var xhr = new XMLHttpRequest();

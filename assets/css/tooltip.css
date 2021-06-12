@@ -7,13 +7,17 @@
     color: black;
     border-radius: 5px;
     box-shadow: 2px 2px 7px #0000007a;
-    z-index: 1000;
+    z-index: 1000 !important;
+}
+
+.left-content .tj-tooltip .tooltip-content{
     transform: translateY(calc(-100% - 2em));
-    animation: show .5s;
+    animation: show .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .right-content .tj-tooltip .tooltip-content{
     transform: translate(-100%, calc(-100% - 2em));
+    animation: showright .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .tj-tooltip{
@@ -31,8 +35,25 @@
 }
 
 @keyframes show{
-    0%{ opacity: 0; }
-    100% { opacity: 1; }
+    0%{
+        opacity: 0;
+        transform: scale(.5) translateY(calc(-100% - 2em));
+    }
+    100% {
+        opacity: 1; 
+        transform: scale(1) translateY(calc(-100% - 2em));
+    }
+}
+
+@keyframes showright{
+    0%{
+        opacity: 0;
+        transform: scale(.5) translate(-100%, calc(-100% - 2em));
+    }
+    100% {
+        opacity: 1; 
+        transform: scale(1) translate(-100%, calc(-100% - 2em));
+    }
 }
 
 .langage-description{
