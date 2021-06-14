@@ -4,7 +4,7 @@ $(document).ready(function () {
     $(document).on("click", ".btn-menu", showProfil);
     $(document).on("click", ".btn-close", closeProfil);
 
-    $("img").bind('load', function() {
+    $(document).on('load', "img", function() {
         $(this).css("display", "inline-block");
     });
 });
