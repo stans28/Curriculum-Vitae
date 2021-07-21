@@ -147,6 +147,8 @@ img{
 }
 
 .contenu{
+    position : relative;
+    z-index : 1000;
     padding-left: 3rem;
     padding-top: 2rem;
 }

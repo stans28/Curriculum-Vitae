@@ -7,7 +7,7 @@
     color: black;
     border-radius: 5px;
     box-shadow: 2px 2px 7px #0000007a;
-    z-index: 1000 !important;
+    z-index: 1000;
 }
 
 .left-content .tj-tooltip .tooltip-content{
