@@ -4,6 +4,12 @@ $(document).ready(function () {
     $(document).on("click", ".btn-menu", showProfil);
     $(document).on("click", ".btn-close", closeProfil);
 
+    $("#profil_img").on('load', function() {
+        $(this).css("display", "inline-block");
+    }).each(function() {
+        if(this.complete) $(this).trigger("load");
+    });
+
     $(document).on('load', "img", function() {
         $(this).css("display", "inline-block");
     });
