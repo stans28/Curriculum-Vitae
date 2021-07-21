@@ -9,10 +9,6 @@ $(document).ready(function () {
     }).each(function() {
         if(this.complete) $(this).trigger("load");
     });
-
-    $(document).on('load', "img", function() {
-        $(this).css("display", "inline-block");
-    });
 });
 
 function showJob() {
